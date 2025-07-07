@@ -2,6 +2,7 @@ package com.ikhzan.taskclient.remote
 
 import com.ikhzan.taskclient.remote.task.TaskService
 import com.ikhzan.taskclient.remote.team.TeamService
+import com.ikhzan.taskclient.remote.user.UserService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -22,5 +23,10 @@ object RetrofitInstance {
     val teamService: TeamService by lazy {
         retrofit.create(TeamService::class.java)
     }
+
+    val userService: UserService by lazy {
+        retrofit.create(UserService::class.java)
+    }
+
 
 }

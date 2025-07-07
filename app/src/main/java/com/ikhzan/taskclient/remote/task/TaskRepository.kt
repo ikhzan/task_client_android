@@ -9,4 +9,8 @@ class TaskRepository {
     suspend fun getTasks(): List<TaskModel>{
         return taskService.getTasks()
     }
+
+    suspend fun addTask(taskModel: TaskModel){
+        taskService.addTask(taskModel)
+    }
 }
